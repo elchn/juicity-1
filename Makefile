@@ -21,8 +21,9 @@ juicity-server:
 		 ./cmd/server
 
 juicity-client:
-	CGO_ENABLED=$(CGO_ENABLED) go build -o $@ -trimpath \
-		 -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" \
+	CGO_ENABLED=$(CGO_ENABLED) go build -mod=vendor -o $@ -trimpath \
+		 -gcflags="all=-N -l"\
+		 -ldflags "-X github.com/juicity/juicity/config.Version=$(VERSION)" \
 		 ./cmd/client
 
 .PHONY: juicity-server juicity-client all

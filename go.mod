@@ -1,6 +1,6 @@
 module github.com/juicity/juicity
 
-go 1.21.0
+go 1.23.1
 
 require (
 	github.com/daeuniverse/outbound v0.0.0-20240413032918-078e65ce9409
@@ -18,6 +18,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.6 // indirect
 	github.com/cloudflare/circl v1.3.7 // indirect
+	github.com/daeuniverse/softwind/proxy/juicity v0.0.0-unpublished
 	github.com/dgryski/go-camellia v0.0.0-20191119043421-69a8a13fb23d // indirect
 	github.com/dgryski/go-idea v0.0.0-20170306091226-d2fb45a411fb // indirect
 	github.com/dgryski/go-metro v0.0.0-20211217172704-adc40b04c140 // indirect
@@ -57,8 +58,10 @@ require (
 
 replace github.com/nadoo/glider => github.com/juicity/glider v0.0.0-20230805143717-947042416fa6
 
-// replace github.com/daeuniverse/softwind => ../softwind
+replace github.com/daeuniverse/softwind v0.0.0-20240413031314-0049ada6ee9d => ./my/softwind
 
 // replace github.com/daeuniverse/quic-go => ../quic-go
 
 // replace github.com/daeuniverse/quic-go => github.com/daeuniverse/quic-go v0.0.0-20230821141654-3dd2575ee6bc
+
+// replace github.com/daeuniverse/softwind/proxy/juicity v0.0.0-unpublished => ./my/juicity
