@@ -116,12 +116,12 @@ func (d *Dialer) Dial(network string, addr string) (c netproxy.Conn, err error) 
 			return nil, err
 		}
 		mdata.IsClient = true
-		fmt.Println("123---123---123---123---123---")
+		// fmt.Println("123---123---123---123---123---")
 		var dialer net.Dialer
 		net.DefaultResolver = &net.Resolver{
 			PreferGo: false,
 			Dial: func(context context.Context, _, _ string) (net.Conn, error) {
-				conn, err := dialer.DialContext(context, "udp", "223.5.5.5:53")
+				conn, err := dialer.DialContext(context, "udp", "149.112.112.112:53")
 				if err != nil {
 					return nil, err
 				}
